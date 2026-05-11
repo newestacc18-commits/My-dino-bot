@@ -1,0 +1,67 @@
+{
+  "generated_at": "2026-05-11T05:46:33.731662+00:00",
+  "dinosaurs": [
+    {
+      "label": "Spinosaurus",
+      "role_id": "1498753063425675314",
+      "members_with_role": 1,
+      "top": [
+        {
+          "name": "\ud835\udc01\ud835\udc22\ud835\udc20 \ud835\udc0e\ud835\udc29\ud835\udc29",
+          "user_id": "837886323385040926",
+          "wins": 1,
+          "losses": 0
+        }
+      ]
+    },
+    {
+      "label": "Tylosaurus",
+      "role_id": "1498754033832300614",
+      "members_with_role": 1,
+      "top": []
+    },
+    {
+      "label": "Sarcosuchus",
+      "role_id": "1498754412062052382",
+      "members_with_role": 1,
+      "top": []
+    },
+    {
+      "label": "Deinocheirus",
+      "role_id": "1498754336384090302",
+      "members_with_role": 1,
+      "top": []
+    },
+    {
+      "label": "Suchomimus",
+      "role_id": "1498754189591843016",
+      "members_with_role": 1,
+      "top": []
+    },
+    {
+      "label": "Kaiwhekea",
+      "role_id": "1498754736713633993",
+      "members_with_role": 1,
+      "top": []
+    },
+    {
+      "label": "Concavenator",
+      "role_id": "1498754513170071612",
+      "members_with_role": 1,
+      "top": []
+    },
+    {
+      "label": "Megalania",
+      "role_id": "1498754576080437420",
+      "members_with_role": 1,
+      "top": [
+        {
+          "name": "\ud835\udc01\ud835\udc22\ud835\udc20 \ud835\udc0e\ud835\udc29\ud835\udc29",
+          "user_id": "837886323385040926",
+          "wins": 1,
+          "losses": 0
+        }
+      ]
+    }
+  ]
+}
