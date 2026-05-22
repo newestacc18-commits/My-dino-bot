@@ -986,31 +986,19 @@ async def post_commands(ctx):
 # --- THE WELCOME EVENT HANDLER ---
 @bot.event
 async def on_member_join(member):
-    welcome_channel_id = 1347411990425931837 
+    welcome_channel_id = 1347411990425931837
     channel = member.guild.get_channel(welcome_channel_id)
-    
     if channel is not None:
         member_count = member.guild.member_count
-        
-        embed = discord.Embed(
-            title="Welcome to #𝐁𝐞𝐥𝐭𝐓𝐞𝐚𝐦!",
-            description=f"Glad to have you with us, {member.mention}!\n\n"
-                        f"**Next Steps:**\n"
-                        f"🔹 Check out the <#1347411991098167451>\n"
-                        f"🔹 Grab your roles in <#1503795428661923390>\n"
-                        f"🔹 Say hi in <#1347411991613931586>\n\n"
-                        f"*You are member #{member_count}!*",
-            color=discord.Color.from_str("#2F3136")
-        )
-        
+        msg = f"Glad to have you with us, {member.mention}!\n\n**Next Steps:**\n🔹 Check out the <#1347411991098167451>\n🔹 Grab your roles in <#1503795428661923390>\n🔹 Say hi in <#1347411991613931586>\n\n*You are member #{member_count}!*"
+        embed = discord.Embed(title="Welcome to #𝐁𝐞𝐥𝐭𝐓𝐞𝐚𝐦!", description=msg, color=discord.Color.from_str("#2F3136"))
         embed.set_image(url="https://files.catbox.moe/o7itsc.png")
         await channel.send(embed=embed)
 
 # --- QUICK TEST COMMAND ---
 @bot.command()
 async def testwelcome(ctx):
-    """Type !testwelcome in your server to force-trigger the welcome embed!"""
     await on_member_join(ctx.author)
 
-# --- START THE BOT (MUST BE THE ABSOLUTE LAST LINE) ---
+# --- START THE BOT ---
 bot.run(TOKEN)
