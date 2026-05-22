@@ -986,7 +986,8 @@ async def post_commands(ctx):
 # --- THE WELCOME EVENT HANDLER ---
 @bot.event
 async def on_member_join(member):
-    welcome_channel_id = 1347411990425931837
+    # 🚨 Updated with your exact welcome channel ID!
+    welcome_channel_id = 1347411990632726561
     channel = member.guild.get_channel(welcome_channel_id)
     if channel is not None:
         member_count = member.guild.member_count
