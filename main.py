@@ -995,12 +995,12 @@ async def on_member_join(member):
         embed.set_image(url="https://files.catbox.moe/o7itsc.png")
         await channel.send(embed=embed)
 
-# --- QUICK TEST EVENT (FOOLPROOF) ---
+# --- EMERGENCY SANITY TEST ---
 @bot.event
 async def on_message(message):
     if message.content == "!testwelcome":
-    await on_member_join(message.author)
+        await message.channel.send("ping")
     await bot.process_commands(message)
-
+    
 # --- START THE BOT ---
 bot.run(TOKEN)
