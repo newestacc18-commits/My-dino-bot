@@ -983,11 +983,9 @@ async def post_commands(ctx):
     action = "updated" if saved else "posted"
     await ctx.send(f"📬 Command reference {action} in {channel.mention}.")
 
-
-bot.run(TOKEN)
+# --- THE WELCOME EVENT HANDLER ---
 @bot.event
 async def on_member_join(member):
-    # The welcome channel ID where the message will be sent
     welcome_channel_id = 1347411990425931837 
     channel = member.guild.get_channel(welcome_channel_id)
     
@@ -1007,3 +1005,7 @@ async def on_member_join(member):
         
         embed.set_image(url="https://photos.app.goo.gl/tzXjS3CzUe8ssiKZ8")
         await channel.send(embed=embed)
+
+# --- START THE BOT (THIS MUST ALWAYS BE THE ABSOLUTE LAST LINE) ---
+bot.run(TOKEN)
+
