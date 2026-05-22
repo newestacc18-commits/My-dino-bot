@@ -985,3 +985,25 @@ async def post_commands(ctx):
 
 
 bot.run(TOKEN)
+@bot.event
+async def on_member_join(member):
+    # The welcome channel ID where the message will be sent
+    welcome_channel_id = 1347411990425931837 
+    channel = member.guild.get_channel(welcome_channel_id)
+    
+    if channel is not None:
+        member_count = member.guild.member_count
+        
+        embed = discord.Embed(
+            title="Welcome to #𝐁𝐞𝐥𝐭𝐓𝐞𝐚𝐦!",
+            description=f"Glad to have you with us, {member.mention}!\n\n"
+                        f"**Next Steps:**\n"
+                        f"🔹 Check out the <#1347411991098167451>\n"
+                        f"🔹 Grab your roles in <#1503795428661923390>\n"
+                        f"🔹 Say hi in <#1347411991613931586>\n\n"
+                        f"*You are member #{member_count}!*",
+            color=discord.Color.from_str("#2F3136")
+        )
+        
+        embed.set_image(url="https://photos.app.goo.gl/tzXjS3CzUe8ssiKZ8")
+        await channel.send(embed=embed)
