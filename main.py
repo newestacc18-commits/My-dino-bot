@@ -992,7 +992,7 @@ async def on_member_join(member):
         member_count = member.guild.member_count
         msg = f"Glad to have you with us, {member.mention}!\n\n**Next Steps:**\n🔹 Check out the <#1347411991098167451>\n🔹 Grab your roles in <#1503853100857823412>\n🔹 Say hi in <#1347411991613931586>\n\n*You are member #{member_count}!*"
         embed = discord.Embed(title="Welcome to #𝐁𝐞𝐥𝐭𝐓𝐞𝐚𝐦!", description=msg, color=discord.Color.from_str("#2F3136"))
-        embed.set_image(url="https://files.catbox.moe/o7itsc.png")
+        embed.set_image(url="https://cdn.discordapp.com/attachments/1424571289208885414/1507469760428904570/Screenshot_20260512-134256.png?ex=6a12041e&is=6a10b29e&hm=ac6009138896d562c94093616fc60e08542631b6fb421ab79f84fd7d4a2cbe86&")
         await channel.send(embed=embed)
 
 # --- QUICK TEST EVENT (FOOLPROOF) ---
@@ -1002,7 +1002,7 @@ async def on_message(message):
         member_count = message.guild.member_count
         msg = f"Glad to have you with us, {message.author.mention}!\n\n**Next Steps:**\n🔹 Check out the <#1347411991098167451>\n🔹 Grab your roles in <#1503853100857823412>\n🔹 Say hi in <#1347411991613931586>\n\n*You are member #{member_count}!*"
         embed = discord.Embed(title="Welcome to #𝐁𝐞𝐥𝐭𝐓𝐞𝐚𝐦!", description=msg, color=discord.Color.from_str("#2F3136"))
-        embed.set_image(url="https://files.catbox.moe/o7itsc.png")
+        embed.set_image(url="https://cdn.discordapp.com/attachments/1424571289208885414/1507469760428904570/Screenshot_20260512-134256.png?ex=6a12041e&is=6a10b29e&hm=ac6009138896d562c94093616fc60e08542631b6fb421ab79f84fd7d4a2cbe86&")
         await message.channel.send(embed=embed)
     await bot.process_commands(message)
 
