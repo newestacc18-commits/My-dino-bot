@@ -984,6 +984,7 @@ async def post_commands(ctx):
     await ctx.send(f"📬 Command reference {action} in {channel.mention}.")
 
 # --- THE WELCOME EVENT HANDLER ---
+# --- THE WELCOME EVENT HANDLER ---
 @bot.event
 async def on_member_join(member):
     welcome_channel_id = 1347411990425931837 
@@ -1003,9 +1004,15 @@ async def on_member_join(member):
             color=discord.Color.from_str("#2F3136")
         )
         
-        embed.set_image(url="https://photos.app.goo.gl/tzXjS3CzUe8ssiKZ8")
+        # Direct URL for the DRENCH GANG banner image
+        embed.set_image(url="https://files.catbox.moe/o7itsc.png")
         await channel.send(embed=embed)
 
-# --- START THE BOT (THIS MUST ALWAYS BE THE ABSOLUTE LAST LINE) ---
-bot.run(TOKEN)
+# --- QUICK TEST COMMAND ---
+@bot.command()
+async def testwelcome(ctx):
+    """Type !testwelcome in your server to force-trigger the welcome embed!"""
+    await on_member_join(ctx.author)
 
+# --- START THE BOT (MUST BE THE ABSOLUTE LAST LINE) ---
+bot.run(TOKEN)
