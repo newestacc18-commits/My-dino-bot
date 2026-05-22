@@ -984,7 +984,6 @@ async def post_commands(ctx):
     await ctx.send(f"📬 Command reference {action} in {channel.mention}.")
 
 # --- THE WELCOME EVENT HANDLER ---
-# --- THE WELCOME EVENT HANDLER ---
 @bot.event
 async def on_member_join(member):
     welcome_channel_id = 1347411990425931837 
@@ -993,7 +992,7 @@ async def on_member_join(member):
     if channel is not None:
         member_count = member.guild.member_count
         
-        embed = discord.Embed(
+                embed = discord.Embed(
             title="Welcome to #𝐁𝐞𝐥𝐭𝐓𝐞𝐚𝐦!",
             description=f"Glad to have you with us, {member.mention}!\n\n"
                         f"**Next Steps:**\n"
@@ -1002,8 +1001,6 @@ async def on_member_join(member):
                         f"🔹 Say hi in <#1347411991613931586>\n\n"
                         f"*You are member #{member_count}!*",
             color=discord.Color.from_str("#2F3136")
-        )
-        
         # Direct URL for the DRENCH GANG banner image
         embed.set_image(url="https://files.catbox.moe/o7itsc.png")
         await channel.send(embed=embed)
